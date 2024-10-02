@@ -2,12 +2,11 @@ import React, { useEffect, useState } from 'react';
 
 function Rightbar() {
 
-	const apiKey = process.env.REACT_APP_API_KEY
-
+	
 	const [news,setNews] = useState([])
    const getNews = () => {
     fetch(
-      `https://newsapi.org/v2/everything?q=Apple&sortBy=popularity&apiKey=${apiKey}`
+      `https://newsapi.org/v2/everything?q=Apple&sortBy=popularity&apiKey=68f1b6492b654b448da8e6aceeed3d52`
     )
       .then((res) => res.json())
       .then(json => setNews(json.articles));
